@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/AirtonCabral/solucoesdigitais/issues"
   },
-  "homepage": "https://github.com/AirtonCabral/solucoesdigitais#readme"
+  "homepage": "https://github.com/AirtonCabral/solucoesdigitais#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^0.4.3",
+    "bootstrap": "^3.3.7"
+  }
 }

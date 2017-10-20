@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+}
+
+#maxconten {
+  height: 100%;
+}
+
+.navbar {
+  height: 70px;
+  border-bottom: 1px solid #CC092F;
+  margin-bottom: 0px;
+}
+
+.navbar .container-fluid ul li a {
+  height: 69px;
+  padding-top: 27px;
+}
+
+.navbar .container-fluid ul li img {
+  height: 51px;
+  margin-top: 10px;
+}
+
+.navbar .navbar-text {
+  margin-top: 26px;
+}
+
+#home {
+  height: 100%;
+  background-color: #E5E5E5;
+}
+
+#home .sidebar {
+  background-color: #A5AAB6;
+  height: 100%;
+}
+
+#home .sidebar .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#home .sidebar .person {
+  background-color: white;
+  min-height: 70px;
+  margin-top: 10px;
+}
+
+#home .sidebar .person .smallcard {
+  padding: 0;
+}
+
+#home .sidebar .person .smallcard .profile-img {
+  height: 70px;
+  padding: 5px;
+}
+
+#home .sidebar .person .smallcard .profile-details {
+  padding: 5px;
+}
+
+#home .sidebar .inputSearch {
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+}
+
+#home .content {
+  height: 100%;
+}
+ 
+
+ /*# sourceMappingURL= home.css.map */

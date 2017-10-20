@@ -1,0 +1,93 @@
+<div id="home">
+  <div class="col-sm-3 sidebar">
+    <input type="text" class="inputSearch" ng-model="vm.nome">
+    <button class="btn btn-primary btn-success">Adicionar</button>
+    <div class="person" ng-repeat="person in vm.colaboradores | filter: vm.nome">
+      <div class="col-sm-12 smallcard">
+        <div class="col-sm-4">
+          <img class="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" style="border-radius:100%" />
+        </div>
+        <div class="col-sm-8 profile-details">
+          <p>{{person.contributor}}
+            <br>{{person.careerfield}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-9 container">
+    {{vm.user}}
+    <br>
+    <div class="col-sm-12">
+      <form role="form" name="mainForm" ng-submit="vm.send()">
+        <div class="form-group">
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="col-xs-7">
+              <div class="form-group">
+                <input type="text" ng-model="vm.user.contributor" name="username" class="form-control input-sm" placeholder="Nome" required />
+              </div>
+            </div>
+            <div class="col-xs-5">
+                <div class="form-group">
+                  <input type="text" ng-model="vm.user.city" name="usercity" class="form-control input-sm" placeholder="Cidade" required>
+                </div>
+              </div>
+            <div class="col-xs-7">
+              <div class="form-group">
+                <input type="text" ng-model="vm.user.careerfield" name="usercareerfield" class="form-control input-sm" placeholder="Carreira">
+              </div>
+            </div>
+            
+            <div class="col-xs-5">
+              <div class="form-group">
+                <input type="text" ng-model="vm.user.project" name="userproject" class="form-control input-sm" placeholder="Projeto">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-10 col-xs-offset-1">
+              <div class="col-xs-7">
+                <div class="form-group">
+                  <input type="text" ng-model="vm.user.contact.email" name="useremail" class="form-control input-sm" placeholder="Email">
+                </div>
+              </div>
+              <div class="col-xs-5">
+                <div class="form-group">
+                  <input type="text" ng-model="vm.user.contact.tel" name="usertel" class="form-control input-sm" placeholder="Telefone">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="text" ng-model="vm.user.contact.slack" name="userslack" class="form-control input-sm" placeholder="Slack">
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="text" ng-model="vm.user.contact.skype" name="userskype" class="form-control input-sm" placeholder="Skype">
+                </div>
+              </div>
+          </div>
+          <div class="col-xs-10 col-xs-offset-1">
+              <div class="col-xs-6">
+                  <input ng-model="vm.user.skills.graduation.degree" name="userdegree" cols="30" rows="5" style="width:100%" placeholder="Graduação" />
+              </div>
+              <div class="col-xs-6">
+                  <input ng-model="vm.user.skills.graduation.master" name="usermaster" cols="30" rows="5" style="width:100%" placeholder="Pós-graduação" />
+              </div>
+              <div class="col-xs-12">
+                  <textarea ng-model="vm.user.skills.experience" name="userexperience" cols="30" rows="5" style="width:100%"  placeholder="Experiência" >Experiência</textarea>
+              </div>
+              <div class="col-xs-6">
+                  <input ng-model="vm.user.skills.knowleges.tools" name="usertel" cols="30" rows="5" style="width:100%" placeholder="Ferramentas" />
+                  <input ng-model="vm.user.skills.knowleges.course" name="usertel" cols="30" rows="5" style="width:100%" placeholder="Cursos"/>
+              </div>
+              <div class="col-xs-6">
+                  <input ng-model="vm.user.skills.knowleges.certification" name="usertel" cols="30" rows="5" style="width:100%" placeholder="Certificações"/>
+              </div>
+          </div>
+        </div>
+        <input type="submit" value="Register" class="btn btn-block btn-info ">
+      </form>
+    </div>
+    <!-- {{vm.colaboradores}} -->
+    <div ui-view></div>
+  </div>
+</div>

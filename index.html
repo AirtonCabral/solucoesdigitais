@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Soluções Digitais</title>
+</head>
+<script src="./node_modules/angular/angular.js"></script>
+<script src="./node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="./core.module.js"></script>
+<script src="./core.controller.js"></script>
+<script src="./core.service.js"></script>
+<script src="./core.config.js"></script>
+
+<script src="pages/home/home.controller.js"></script>
+<script src="pages/login/login.controller.js"></script>
+
+<link rel="stylesheet" href="./node_modules/angular/angular-csp.css">
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-theme.css">
+
+<link rel="stylesheet" href="./pages/home/home.css">
+
+<body ng-controller="coreController as vm">
+  <nav class="navbar navbar-static-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li>
+          <img alt="Brand" src="./images/c67a412eb9f891ed2c67ea894dcf9b80.png">
+        </li>
+        <li>
+          <a ui-sref="home">Home</a>
+        </li>
+        <li>
+          <a ui-sref="login">Login</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <p class="navbar-text">Equipe de Soluções Digitais</p>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid" ui-view style="height:100%; padding:0">
+  </div>
+</body>
+
+</html>
